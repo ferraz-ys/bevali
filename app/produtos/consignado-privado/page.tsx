@@ -7,7 +7,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
-import { ArrowRight, Calculator } from "lucide-react"
+import { ArrowRight, Calculator, CheckCircle } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function ConsignadoPrivadoPage() {
   const [valorDesejado, setValorDesejado] = useState("")
@@ -26,7 +27,7 @@ export default function ConsignadoPrivadoPage() {
       <section className="relative bg-secondary-900 text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src="https://placehold.co/1600x800/1e293b/ffffff?text=Banner+Consignado+Privado"
             alt="Trabalhadores CLT"
             fill
             className="object-cover opacity-60"
@@ -103,79 +104,19 @@ export default function ConsignadoPrivadoPage() {
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
-                    <div className="bg-primary rounded-full p-1 mr-3 mt-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-white"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </div>
-                    <span>Taxas a partir de 1,89% ao mês</span>
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                    <span>Taxas a partir de 3% ao mês (análise de cada banco)</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary rounded-full p-1 mr-3 mt-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-white"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </div>
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                     <span>Parcelas descontadas diretamente da folha de pagamento</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary rounded-full p-1 mr-3 mt-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-white"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </div>
-                    <span>Prazos de até 72 meses para pagamento</span>
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                    <span>Prazos de até 36 meses para pagamento</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary rounded-full p-1 mr-3 mt-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-white"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </div>
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                     <span>Aprovação rápida e sem burocracia</span>
                   </li>
                 </ul>
@@ -190,7 +131,7 @@ export default function ConsignadoPrivadoPage() {
 
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Consignado+Privado"
                   alt="Trabalhadores CLT"
                   fill
                   className="object-cover"
@@ -283,6 +224,88 @@ export default function ConsignadoPrivadoPage() {
                 contrato.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">Perguntas Frequentes</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Tire suas dúvidas sobre o consignado privado para trabalhadores CLT
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Quem pode contratar?</AccordionTrigger>
+                <AccordionContent>
+                  O consignado privado está disponível para trabalhadores CLT de empresas privadas e conveniadas. É
+                  necessário ter carteira assinada e que sua empresa tenha convênio com as instituições financeiras
+                  parceiras.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Quais documentos são necessários?</AccordionTrigger>
+                <AccordionContent>
+                  <p>Para contratar o consignado privado, você precisará dos seguintes documentos:</p>
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>RG/CPF ou CNH</li>
+                    <li>Comprovante de residência (últimos 90 dias)</li>
+                    <li>Carteira de trabalho ou holerite</li>
+                    <li>Dados bancários</li>
+                  </ul>
+                  <p className="mt-2">Todo o envio de documentação é 100% digital.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Qual o tempo de liberação?</AccordionTrigger>
+                <AccordionContent>
+                  O processo de aprovação é rápido, podendo ocorrer em até 2 horas. Após a aprovação, o dinheiro é
+                  liberado em sua conta em até 24 horas úteis.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Como funciona o desconto em folha?</AccordionTrigger>
+                <AccordionContent>
+                  O valor da parcela é descontado diretamente do seu salário, antes mesmo que o dinheiro caia em sua
+                  conta. Isso garante que você nunca esqueça de pagar e evita atrasos, o que contribui para as taxas
+                  reduzidas.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Qual valor posso solicitar?</AccordionTrigger>
+                <AccordionContent>
+                  Você pode solicitar até 30% do seu salário (margem consignável). Este é o limite máximo que pode ser
+                  comprometido com parcelas de empréstimo consignado, garantindo que você não comprometa excessivamente
+                  sua renda.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger>Posso quitar antes?</AccordionTrigger>
+                <AccordionContent>
+                  Sim, é possível quitar o empréstimo antecipadamente, com desconto proporcional nos juros. Para isso,
+                  basta entrar em contato com nossa central de atendimento e solicitar o valor atualizado para quitação.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger>E se eu for demitido?</AccordionTrigger>
+                <AccordionContent>
+                  Em caso de demissão, existem duas possibilidades: o valor restante pode ser descontado das verbas
+                  rescisórias ou você receberá boletos para continuar o pagamento. Algumas instituições oferecem seguro
+                  opcional para cobrir essa situação.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>

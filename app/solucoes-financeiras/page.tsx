@@ -3,14 +3,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { CreditCard, Calendar, Users, CheckCircle } from "lucide-react"
 
-export default function ProdutosPage() {
+export default function SolucoesFinanceirasPage() {
   return (
     <div className="flex flex-col">
       <section className="bg-secondary-900 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Nossos Produtos</h1>
           <p className="text-white/90 max-w-2xl mx-auto">
-            Conheça todas as nossas soluções financeiras e encontre a opção ideal para você.
+            Conheça nossas soluções financeiras e encontre a opção ideal para você
           </p>
         </div>
       </section>
@@ -51,12 +51,12 @@ export default function ProdutosPage() {
                 </div>
 
                 <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-                  <Link href="/produtos/credito-consignado">Saiba mais</Link>
+                  <Link href="/solucoes-financeiras/credito-consignado">Saiba mais</Link>
                 </Button>
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Produto"
+                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
                   alt="Crédito Consignado"
                   fill
                   className="object-cover"
@@ -97,12 +97,12 @@ export default function ProdutosPage() {
                 </div>
 
                 <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-                  <Link href="/produtos/antecipacao-fgts">Saiba mais</Link>
+                  <Link href="/solucoes-financeiras/antecipacao-fgts">Saiba mais</Link>
                 </Button>
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl md:order-1">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Produto"
+                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
                   alt="Antecipação de FGTS"
                   fill
                   className="object-cover"
@@ -143,34 +143,18 @@ export default function ProdutosPage() {
                 </div>
 
                 <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-                  <Link href="/produtos/consignado-privado">Saiba mais</Link>
+                  <Link href="/solucoes-financeiras/consignado-privado">Saiba mais</Link>
                 </Button>
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Produto"
+                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
                   alt="Consignado Privado"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-secondary-800">Outros Produtos</h2>
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
-            <p className="text-lg mb-6">
-              Atualmente, a Bevali está focada em oferecer os melhores serviços em Crédito Consignado, Antecipação de
-              FGTS e Consignado Privado. Não oferecemos empréstimo pessoal ou financiamento no momento.
-            </p>
-            <p className="text-lg">
-              Estamos constantemente avaliando novas oportunidades para melhor atender nossos clientes. Fique atento às
-              novidades!
-            </p>
           </div>
         </div>
       </section>

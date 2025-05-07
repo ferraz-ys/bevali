@@ -4,12 +4,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 const partners = [
-  { id: 1, name: "Banco 1", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 2, name: "Banco 2", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 3, name: "Banco 3", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 4, name: "Banco 4", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 5, name: "Banco 5", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 6, name: "Banco 6", logo: "/placeholder.svg?height=80&width=160" },
+  { id: 1, name: "Banco Facta", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
+  { id: 2, name: "Banco C6", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
+  { id: 3, name: "Banco Pan", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
+  { id: 4, name: "Banco Novo Saque", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
 ]
 
 export function PartnersSection() {
@@ -24,7 +22,7 @@ export function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {partners.map((partner) => (
             <Card key={partner.id} className="border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-4 flex items-center justify-center h-24">

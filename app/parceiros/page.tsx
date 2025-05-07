@@ -5,15 +5,10 @@ import Link from "next/link"
 import { Handshake } from "lucide-react"
 
 const partners = [
-  { id: 1, name: "Banco 1", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2015" },
-  { id: 2, name: "Banco 2", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2016" },
-  { id: 3, name: "Banco 3", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2017" },
-  { id: 4, name: "Banco 4", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2018" },
-  { id: 5, name: "Banco 5", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2019" },
-  { id: 6, name: "Banco 6", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2020" },
-  { id: 7, name: "Banco 7", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2021" },
-  { id: 8, name: "Banco 8", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2022" },
-  { id: 9, name: "Banco 9", logo: "/placeholder.svg?height=80&width=160", description: "Parceiro desde 2023" },
+  { id: 1, name: "Banco Facta", logo: "/placeholder.svg?height=80&width=160" },
+  { id: 2, name: "C6 Bank", logo: "/placeholder.svg?height=80&width=160" },
+  { id: 3, name: "Banco Pan", logo: "/placeholder.svg?height=80&width=160" },
+  { id: 4, name: "Banco Novo Saque", logo: "/placeholder.svg?height=80&width=160" },
 ]
 
 export default function ParceirosPage() {
@@ -38,7 +33,7 @@ export default function ParceirosPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partners.map((partner) => (
               <Card key={partner.id} className="border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
@@ -53,7 +48,6 @@ export default function ParceirosPage() {
                       />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{partner.name}</h3>
-                    <p className="text-muted-foreground">{partner.description}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -64,42 +58,31 @@ export default function ParceirosPage() {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">Seja um Parceiro</h2>
-              <p className="text-muted-foreground mb-6">
-                A Bevali Promotora está sempre em busca de novas parcerias para ampliar sua atuação e oferecer ainda
-                mais opções para seus clientes.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Se você representa uma instituição financeira e tem interesse em se tornar um parceiro, entre em contato
-                conosco. Teremos prazer em discutir as possibilidades de parceria.
-              </p>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-primary mb-4">Parcerias</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Atualmente, a Bevali trabalha exclusivamente com parceiros selecionados para garantir a qualidade dos
+              serviços oferecidos.
+            </p>
+          </div>
 
-              <div className="flex items-center mb-8">
-                <div className="bg-primary/10 p-3 rounded-full mr-4">
-                  <Handshake className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold">Benefícios da Parceria</h3>
-                  <p className="text-muted-foreground">
-                    Amplie seu alcance e aumente suas operações com nossa rede de clientes.
-                  </p>
-                </div>
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <div className="flex items-center mb-6">
+              <div className="bg-primary/10 p-3 rounded-full mr-4">
+                <Handshake className="h-6 w-6 text-primary" />
               </div>
-
+              <div>
+                <h3 className="font-bold text-xl">Sobre Novas Parcerias</h3>
+              </div>
+            </div>
+            <p className="text-muted-foreground mb-6">
+              No momento, não oferecemos a possibilidade de novas parcerias. Nosso foco está em fortalecer as relações
+              com nossos parceiros atuais para garantir o melhor atendimento aos nossos clientes.
+            </p>
+            <div className="mt-8 text-center">
               <Button asChild size="lg">
                 <Link href="/contato">Fale conosco</Link>
               </Button>
-            </div>
-
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Parceria Bevali Promotora"
-                fill
-                className="object-cover"
-              />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -15,47 +15,60 @@ export default function Footer() {
             </Link>
             <p className="text-sm mb-4">Soluções financeiras personalizadas com as melhores taxas do mercado.</p>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="hover:text-primary-400">
+              <Link
+                href="https://www.facebook.com/bevalifinanceira/?locale=pt_BR"
+                target="_blank"
+                className="hover:text-primary-400"
+              >
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://instagram.com" className="hover:text-primary-400">
+              <Link
+                href="https://www.instagram.com/_bevali?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                className="hover:text-primary-400"
+              >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://linkedin.com" className="hover:text-primary-400">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
+              <Link href="https://www.tiktok.com/@bevalipromotora" target="_blank" className="hover:text-primary-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                  <path d="M15 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                  <path d="M15 8v8a4 4 0 0 1-4 4" />
+                  <line x1="15" y1="4" x2="15" y2="12" />
+                </svg>
+                <span className="sr-only">TikTok</span>
               </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Produtos</h3>
+            <h3 className="font-bold text-lg mb-4">Soluções Financeiras</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/produtos/credito-consignado" className="text-sm hover:text-primary-400">
+                <Link href="/solucoes-financeiras/credito-consignado" className="text-sm hover:text-primary-400">
                   Crédito Consignado
                 </Link>
               </li>
               <li>
-                <Link href="/produtos/consignado-privado" className="text-sm hover:text-primary-400">
+                <Link href="/solucoes-financeiras/consignado-privado" className="text-sm hover:text-primary-400">
                   Consignado Privado
                 </Link>
               </li>
               <li>
-                <Link href="/produtos/antecipacao-fgts" className="text-sm hover:text-primary-400">
+                <Link href="/solucoes-financeiras/antecipacao-fgts" className="text-sm hover:text-primary-400">
                   Antecipação de FGTS
-                </Link>
-              </li>
-              <li>
-                <Link href="/produtos/emprestimo-pessoal" className="text-sm hover:text-primary-400">
-                  Empréstimo Pessoal
-                </Link>
-              </li>
-              <li>
-                <Link href="/produtos/financiamento" className="text-sm hover:text-primary-400">
-                  Financiamento
                 </Link>
               </li>
             </ul>
@@ -93,29 +106,39 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">
-                  Av. Exemplo, 1234, Sala 567
+                  Av. Sete de Setembro N° 493 - Sala 1
                   <br />
-                  Bairro, Cidade - UF, 12345-678
+                  CEP: 19700-013 - Paraguaçu Paulista - São Paulo
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <Link href="tel:+551199999999" className="text-sm hover:text-primary-400">
-                  (11) 9999-9999
+                <Link href="tel:+551833617726" className="text-sm hover:text-primary-400">
+                  (18) 3361-7726
                 </Link>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <Link href="mailto:contato@bevali.com.br" className="text-sm hover:text-primary-400">
-                  contato@bevali.com.br
+                <Link href="mailto:atendimento@bevali.com.br" className="text-sm hover:text-primary-400">
+                  atendimento@bevali.com.br
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm">
-          <p>© {new Date().getFullYear()} Bevali Promotora. Todos os direitos reservados.</p>
+        <div className="border-t border-white/20 mt-8 pt-8 text-sm">
+          <p className="mb-4">© {new Date().getFullYear()} Bevali Promotora. Todos os direitos reservados.</p>
+          <div className="text-white/70 text-xs leading-relaxed space-y-2">
+            <p>CNPJ: 31.871.646/0001-78 | Razão Social: BEVALI LTDA</p>
+            <p>
+              A Bevali LTDA não realiza operações de crédito diretamente. Atuamos como uma plataforma digital e
+              correspondente bancária, seguindo as diretrizes do Banco Central do Brasil conforme a Resolução nº 3.954,
+              de 24 de fevereiro de 2011. Avaliações de crédito são feitas segundo a política da instituição financeira
+              escolhida pelo usuário. Toda informação sobre condições e produtos é fornecida de forma transparente.
+              Correspondente Autorizado: FACTA FINANCEIRA S.A. (CNPJ: 15.581.638/0001-30).
+            </p>
+          </div>
         </div>
       </div>
     </footer>

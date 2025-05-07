@@ -40,7 +40,6 @@ export default function ContatoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">E-mail</h3>
-                    <p className="text-muted-foreground">contato@bevali.com.br</p>
                     <p className="text-muted-foreground">atendimento@bevali.com.br</p>
                   </div>
                 </div>
@@ -52,9 +51,9 @@ export default function ContatoPage() {
                   <div>
                     <h3 className="font-medium">Endereço</h3>
                     <p className="text-muted-foreground">
-                      Av. Exemplo, 1234, Sala 567
+                      Av. Sete de Setembro N° 493 - Sala 1
                       <br />
-                      Bairro, Cidade - UF, 12345-678
+                      CEP: 19700-013 - Paraguaçu Paulista - São Paulo
                     </p>
                   </div>
                 </div>
@@ -74,7 +73,7 @@ export default function ContatoPage() {
 
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975216722856!2d-46.65429492376366!3d-23.56507017882644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683900095529!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.0176851661193!2d-50.57721492394825!3d-22.41233022290967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfd7e8c8b8b8b9%3A0x9a9b8b8b8b8b8b8b!2sAv.%20Sete%20de%20Setembro%2C%20493%20-%20Centro%2C%20Paragua%C3%A7u%20Paulista%20-%20SP%2C%2019700-013!5e0!3m2!1spt-BR!2sbr!4v1683900095529!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -85,7 +84,9 @@ export default function ContatoPage() {
             </div>
           </div>
 
-          <ContactSection />
+          <div className="border-t pt-16">
+            <ContactSection />
+          </div>
         </div>
       </section>
     </div>

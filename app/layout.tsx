@@ -5,8 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-// Temporarily comment out the TikTok pixel
-// import { TikTokPixel } from "./tiktok-pixel"
+import { TikTokPixel } from "@/components/tiktok-pixel"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -35,8 +34,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-        {/* Temporarily comment out the TikTok pixel */}
-        {/* <TikTokPixel /> */}
+        <TikTokPixel />
       </body>
     </html>
   )

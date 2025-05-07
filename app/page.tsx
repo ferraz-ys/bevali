@@ -1,13 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Image from "next/image"
 import Link from "next/link"
 import { BannerCarousel } from "@/components/banner-carousel"
-import { ProductsSection } from "@/components/products-section"
-import { AboutSection } from "@/components/about-section"
-import { PartnersSection } from "@/components/partners-section"
-import { ContactSection } from "@/components/contact-section"
+import { CheckCircle, CreditCard, Calendar, Users } from "lucide-react"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
 export default function Home() {
@@ -15,202 +10,147 @@ export default function Home() {
     <div className="flex flex-col">
       <BannerCarousel />
 
-      <section className="container mx-auto py-12 px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-secondary-800 mb-4">Nossos Produtos</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos as melhores soluções financeiras com taxas competitivas e atendimento personalizado.
-          </p>
-        </div>
+      {/* Company Differentials */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-secondary-800 mb-4">Por que escolher a Bevali?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Somos especialistas em soluções financeiras com atendimento personalizado
+            </p>
+          </div>
 
-        <Tabs defaultValue="consignado" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="consignado" className="data-[state=active]:bg-primary data-[state=active]:text-white">
-              Crédito Consignado
-            </TabsTrigger>
-            <TabsTrigger value="fgts" className="data-[state=active]:bg-primary data-[state=active]:text-white">
-              Antecipação de FGTS
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="consignado">
-            <Card>
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4 text-secondary-800">Crédito Consignado</h3>
-                    <p className="mb-4">
-                      O crédito consignado é um empréstimo com pagamento indireto, cujas parcelas são descontadas
-                      automaticamente da folha de pagamento ou benefício.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Taxas a partir de 1,70% ao mês
-                      </li>
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Parcelas fixas descontadas em folha
-                      </li>
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Aprovação rápida e sem burocracia
-                      </li>
-                    </ul>
-                    <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-                      <Link href="/contato">Solicitar agora</Link>
-                    </Button>
-                  </div>
-                  <div className="flex justify-center">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Crédito Consignado"
-                      width={300}
-                      height={300}
-                      className="rounded-lg"
-                    />
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <Users className="h-10 w-10 text-primary" />
                 </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">Atendimento Humanizado</h3>
+                <p className="text-muted-foreground">
+                  Oferecemos um atendimento totalmente humanizado, analisando todas as oportunidades para nossos
+                  clientes.
+                </p>
               </CardContent>
             </Card>
-          </TabsContent>
-          <TabsContent value="fgts">
-            <Card>
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4 text-secondary-800">Antecipação de FGTS</h3>
-                    <p className="mb-4">
-                      Antecipe o saque-aniversário do seu FGTS e tenha acesso a recursos financeiros sem comprometer sua
-                      renda mensal.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Antecipe até 10 anos do seu saque-aniversário
-                      </li>
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Sem comprometer sua renda mensal
-                      </li>
-                      <li className="flex items-center">
-                        <span className="bg-primary rounded-full p-1 mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </span>
-                        Dinheiro na conta em até 24 horas
-                      </li>
-                    </ul>
-                    <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-                      <Link href="/contato">Solicitar agora</Link>
-                    </Button>
-                  </div>
-                  <div className="flex justify-center">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Antecipação de FGTS"
-                      width={300}
-                      height={300}
-                      className="rounded-lg"
-                    />
-                  </div>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <CheckCircle className="h-10 w-10 text-primary" />
                 </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">+20.000 Clientes</h3>
+                <p className="text-muted-foreground">
+                  Mais de 20.000 clientes já confiaram em nossos serviços para suas necessidades financeiras.
+                </p>
               </CardContent>
             </Card>
-          </TabsContent>
-        </Tabs>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <CreditCard className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">+R$ 20 Milhões</h3>
+                <p className="text-muted-foreground">
+                  Mais de R$ 20 milhões em crédito liberado, ajudando nossos clientes a realizarem seus objetivos.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </section>
 
-      <ProductsSection />
-      <AboutSection />
-      <PartnersSection />
-      <ContactSection />
+      {/* Main Products */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-secondary-800 mb-4">Nossos Produtos</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Conheça nossas principais soluções e encontre a opção ideal para você
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center h-full">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <CreditCard className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">Crédito Consignado</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  Empréstimo com desconto em folha para servidores públicos, aposentados e pensionistas do INSS.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="mt-auto border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  <Link href="/solucoes-financeiras/credito-consignado">Saiba mais</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center h-full">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <Calendar className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">Antecipação de FGTS</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  Antecipe o saque-aniversário do seu FGTS e tenha dinheiro na conta em até 5 minutos.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="mt-auto border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  <Link href="/solucoes-financeiras/antecipacao-fgts">Saiba mais</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center text-center h-full">
+                <div className="mb-4 p-3 bg-primary/10 rounded-full">
+                  <Users className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-secondary-800">Consignado Privado</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  Crédito consignado com as melhores taxas para trabalhadores CLT de empresas privadas.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="mt-auto border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  <Link href="/solucoes-financeiras/consignado-privado">Saiba mais</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
+              <Link href="/solucoes-financeiras">Ver todas as soluções</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">Pronto para solicitar seu crédito?</h2>
+          <p className="max-w-2xl mx-auto mb-8">
+            Entre em contato conosco agora mesmo e garanta as melhores condições do mercado para o seu empréstimo.
+          </p>
+          <Button asChild size="lg" variant="secondary">
+            <Link href="/contato">Falar com um consultor</Link>
+          </Button>
+        </div>
+      </section>
+
       <WhatsAppButton />
     </div>
   )
