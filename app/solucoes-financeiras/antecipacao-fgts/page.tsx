@@ -2,7 +2,27 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { VideoPlayer } from "@/components/video-player"
+import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Antecipação de FGTS | Bevali Promotora",
+  description:
+    "Antecipe o saque-aniversário do seu FGTS e tenha dinheiro na conta em até 5 minutos. Taxas a partir de 1,50% ao mês, sem consulta ao SPC/Serasa.",
+  keywords: "antecipação FGTS, saque-aniversário, empréstimo FGTS, antecipação saque-aniversário, crédito rápido",
+  openGraph: {
+    title: "Antecipação de FGTS | Bevali Promotora",
+    description: "Antecipe o saque-aniversário do seu FGTS e tenha dinheiro na conta em até 5 minutos.",
+    images: [
+      {
+        url: "/images/products/antecipacao-fgts-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Antecipação de FGTS Bevali",
+      },
+    ],
+  },
+}
 
 export default function AntecipacaoFGTSPage() {
   return (
@@ -56,14 +76,17 @@ export default function AntecipacaoFGTSPage() {
             </div>
             <div className="flex justify-center">
               <div className="relative w-[225px] h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <VideoPlayer
-                  src="/videos/fgts-video.mp4"
-                  className="absolute inset-0"
-                  autoPlay
-                  loop
-                  muted
-                  showControls
-                />
+                {/* Usando vídeo nativo HTML5 em vez do componente personalizado */}
+                <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline controls>
+                  <source src="/videos/fgts-video.mp4" type="video/mp4" />
+                  {/* Fallback para imagem caso o vídeo não carregue */}
+                  <Image
+                    src="/images/products/antecipacao-fgts-2.png"
+                    alt="Antecipação de FGTS"
+                    fill
+                    className="object-cover"
+                  />
+                </video>
               </div>
             </div>
           </div>

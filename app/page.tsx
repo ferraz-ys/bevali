@@ -4,6 +4,27 @@ import Link from "next/link"
 import { BannerCarousel } from "@/components/banner-carousel"
 import { CheckCircle, CreditCard, Calendar, Users } from "lucide-react"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { PartnersSection } from "@/components/partners-section"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Bevali Promotora | Crédito Consignado e Antecipação de FGTS",
+  description:
+    "Soluções financeiras personalizadas com as melhores taxas do mercado. Crédito consignado, antecipação de FGTS e consignado privado.",
+  keywords: "crédito consignado, antecipação FGTS, empréstimo consignado, consignado privado, soluções financeiras",
+  openGraph: {
+    title: "Bevali Promotora | Crédito Consignado e Antecipação de FGTS",
+    description: "Soluções financeiras personalizadas com as melhores taxas do mercado.",
+    images: [
+      {
+        url: "/images/banners/banner-consignado.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Bevali Promotora",
+      },
+    ],
+  },
+}
 
 export default function Home() {
   return (
@@ -131,6 +152,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <PartnersSection />
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">

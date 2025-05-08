@@ -3,6 +3,27 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle, FileText } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Crédito Consignado | Bevali Promotora",
+  description:
+    "Empréstimo com desconto em folha para servidores públicos, aposentados e pensionistas do INSS. Taxas a partir de 1,80% ao mês.",
+  keywords:
+    "crédito consignado, empréstimo consignado, consignado INSS, consignado servidor público, empréstimo com desconto em folha",
+  openGraph: {
+    title: "Crédito Consignado | Bevali Promotora",
+    description: "Empréstimo com desconto em folha para servidores públicos, aposentados e pensionistas do INSS.",
+    images: [
+      {
+        url: "/images/products/credito-consignado-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Crédito Consignado Bevali",
+      },
+    ],
+  },
+}
 
 export default function CreditoConsignadoPage() {
   return (

@@ -5,7 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { TikTokPixel } from "@/components/tiktok-pixel"
+import { ClientScripts } from "@/components/client-scripts"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,7 +34,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-        <TikTokPixel />
+        <ClientScripts />
       </body>
     </html>
   )
