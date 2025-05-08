@@ -57,7 +57,7 @@ export default function AntecipacaoFGTSPage() {
               <div className="relative w-[225px] h-[400px] rounded-lg overflow-hidden shadow-xl">
                 {/* Espaço reservado para vídeo na proporção 9:16 (estilo story de Instagram) */}
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-                  <p className="text-gray-500 font-medium">Vídeo será adicionado em breve</p>
+                  <p className="text-gray-500 font-medium">=</p>
                 </div>
               </div>
             </div>

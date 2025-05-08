@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import Image from "next/image"
 import type { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Antecipação de FGTS | Bevali Promotora",
@@ -76,17 +76,34 @@ export default function AntecipacaoFGTSPage() {
             </div>
             <div className="flex justify-center">
               <div className="relative w-[225px] h-[400px] rounded-lg overflow-hidden shadow-xl">
-                {/* Usando vídeo nativo HTML5 em vez do componente personalizado */}
-                <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline controls>
-                  <source src="/videos/fgts-video.mp4" type="video/mp4" />
-                  {/* Fallback para imagem caso o vídeo não carregue */}
-                  <Image
-                    src="/images/products/antecipacao-fgts-2.png"
-                    alt="Antecipação de FGTS"
-                    fill
-                    className="object-cover"
-                  />
-                </video>
+                {/* Imagem como alternativa principal */}
+                <Image
+                  src="/images/products/antecipacao-fgts-2.png"
+                  alt="Antecipação de FGTS"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+
+                {/* Overlay com ícone de play para sugerir vídeo */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity">
+                  <div className="bg-white/80 rounded-full p-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-primary"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
