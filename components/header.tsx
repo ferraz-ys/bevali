@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation"
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Soluções Financeiras", href: "/solucoes-financeiras" },
+  { label: "Nossos Produtos", href: "/solucoes-financeiras" },
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Parceiros", href: "/parceiros" },
   { label: "Contato", href: "/contato" },

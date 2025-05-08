@@ -56,7 +56,7 @@ export default function SolucoesFinanceirasPage() {
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
+                  src="/images/products/credito-consignado-2.png"
                   alt="Crédito Consignado"
                   fill
                   className="object-cover"
@@ -102,7 +102,7 @@ export default function SolucoesFinanceirasPage() {
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl md:order-1">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
+                  src="/images/products/antecipacao-fgts-2.png"
                   alt="Antecipação de FGTS"
                   fill
                   className="object-cover"
@@ -148,7 +148,7 @@ export default function SolucoesFinanceirasPage() {
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Solução"
+                  src="/images/products/consignado-privado-2.png"
                   alt="Consignado Privado"
                   fill
                   className="object-cover"

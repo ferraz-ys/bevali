@@ -7,7 +7,18 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
-import { ArrowRight, CheckCircle, Phone, Mail, Calendar, Clock, DollarSign, Percent, Calculator } from "lucide-react"
+import {
+  ArrowRight,
+  CheckCircle,
+  Phone,
+  Mail,
+  Calendar,
+  Clock,
+  DollarSign,
+  Percent,
+  Calculator,
+  Star,
+} from "lucide-react"
 import { TikTokPixel } from "@/components/tiktok-pixel"
 
 export default function ConsignadoPrivadoPage() {
@@ -99,7 +110,7 @@ export default function ConsignadoPrivadoPage() {
             </div>
             <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="https://placehold.co/600x500/e2e8f0/1e293b?text=Imagem+Consignado+Privado"
+                src="/images/products/consignado-privado.png"
                 alt="Trabalhador CLT"
                 fill
                 className="object-cover rounded-lg"
@@ -243,7 +254,7 @@ export default function ConsignadoPrivadoPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Consignado+Privado"
+                src="/images/products/consignado-privado.png"
                 alt="Trabalhadores CLT"
                 fill
                 className="object-cover rounded-lg"
@@ -314,48 +325,68 @@ export default function ConsignadoPrivadoPage() {
             <div className="bg-white p-8 rounded-xl shadow-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary font-bold">MR</span>
+                  <span className="text-primary font-bold">BP</span>
                 </div>
                 <div>
-                  <h4 className="font-bold">Marcos Ribeiro</h4>
-                  <p className="text-sm text-gray-500">São Paulo, SP</p>
+                  <h4 className="font-bold">Beneleandro Passos</h4>
+                  <div className="flex text-yellow-400 mt-1">
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                  </div>
                 </div>
               </div>
               <p className="text-gray-600">
-                "Processo super rápido e sem burocracia. Em menos de 24 horas o dinheiro já estava na minha conta.
-                Recomendo!"
+                "Sempre que preciso de vcs, vcs me atendem muito bem, obrigado pela educação como vcs atendem as
+                pessoas, se todos os lugares fossem assim, seria ótimo 🙌🙏"
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary font-bold">CS</span>
+                  <span className="text-primary font-bold">DR</span>
                 </div>
                 <div>
-                  <h4 className="font-bold">Carla Santos</h4>
-                  <p className="text-sm text-gray-500">Rio de Janeiro, RJ</p>
+                  <h4 className="font-bold">Debora Rodrigues</h4>
+                  <div className="flex text-yellow-400 mt-1">
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                  </div>
                 </div>
               </div>
               <p className="text-gray-600">
-                "Atendimento excelente e condições muito melhores que outros bancos. A parcela descontada em folha
-                facilita muito."
+                "Super recomendo o atendimento das meninas, fui até o escritório com dúvidas sobre como sacar o meu FGTS
+                de forma rápida e eficaz e foi sanado todas as minhas dúvidas. O meu agradecimento em especial para a
+                Iasmin que foi super atenciosa e cuidadosa comigo, tirando e esclarecendo todas as dúvidas que eu tinha
+                com um pagamento super rápido em menos de 5 minutos já estava na conta."
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary font-bold">JA</span>
+                  <span className="text-primary font-bold">GF</span>
                 </div>
                 <div>
-                  <h4 className="font-bold">João Almeida</h4>
-                  <p className="text-sm text-gray-500">Belo Horizonte, MG</p>
+                  <h4 className="font-bold">Gabriela Fernandes</h4>
+                  <div className="flex text-yellow-400 mt-1">
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                    <Star className="h-4 w-4 fill-current" />
+                  </div>
                 </div>
               </div>
               <p className="text-gray-600">
-                "Já é a segunda vez que contrato e sempre com muita agilidade. Taxa bem menor que empréstimo pessoal
-                comum."
+                "Fui muito bem atendida pela Maria, esclareceu todas minhas dúvidas e me deixou confiante! Sem dúvidas,
+                um dos melhores atendimentos que já tive!"
               </p>
             </div>
           </div>

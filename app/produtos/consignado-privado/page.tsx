@@ -129,12 +129,12 @@ export default function ConsignadoPrivadoPage() {
                 </Button>
               </div>
 
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Consignado+Privado"
+                  src="/images/products/consignado-privado.png"
                   alt="Trabalhadores CLT"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-lg"
                 />
               </div>
             </div>

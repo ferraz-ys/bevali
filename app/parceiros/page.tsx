@@ -5,10 +5,10 @@ import Link from "next/link"
 import { Handshake } from "lucide-react"
 
 const partners = [
-  { id: 1, name: "Banco Facta", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 2, name: "C6 Bank", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 3, name: "Banco Pan", logo: "/placeholder.svg?height=80&width=160" },
-  { id: 4, name: "Banco Novo Saque", logo: "/placeholder.svg?height=80&width=160" },
+  { id: 1, name: "Facta Financeira", logo: "/images/partners/facta-financeira.png" },
+  { id: 2, name: "C6 Bank", logo: "/images/partners/c6-bank.png" },
+  { id: 3, name: "Banco Pan", logo: "/images/partners/banco-pan.png" },
+  { id: 4, name: "Novo Saque", logo: "/images/partners/novo-saque.png" },
 ]
 
 export default function ParceirosPage() {

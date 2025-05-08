@@ -56,7 +56,7 @@ export default function CreditoConsignadoPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+Consignado"
+                src="/images/products/credito-consignado.png"
                 alt="Crédito Consignado"
                 fill
                 className="object-cover"

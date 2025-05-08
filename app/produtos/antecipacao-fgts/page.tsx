@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
@@ -54,13 +53,13 @@ export default function AntecipacaoFGTSPage() {
                 <Link href="/contato">Solicitar agora</Link>
               </Button>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="https://placehold.co/600x400/e2e8f0/1e293b?text=Imagem+FGTS"
-                alt="Antecipação de FGTS"
-                fill
-                className="object-cover"
-              />
+            <div className="flex justify-center">
+              <div className="relative w-[225px] h-[400px] rounded-lg overflow-hidden shadow-xl">
+                {/* Espaço reservado para vídeo na proporção 9:16 (estilo story de Instagram) */}
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+                  <p className="text-gray-500 font-medium">Vídeo será adicionado em breve</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

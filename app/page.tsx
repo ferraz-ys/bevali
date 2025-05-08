@@ -129,12 +129,6 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white">
-              <Link href="/solucoes-financeiras">Ver todas as soluções</Link>
-            </Button>
-          </div>
         </div>
       </section>
 

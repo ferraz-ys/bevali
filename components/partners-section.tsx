@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 const partners = [
-  { id: 1, name: "Banco Facta", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
-  { id: 2, name: "Banco C6", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
-  { id: 3, name: "Banco Pan", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
-  { id: 4, name: "Banco Novo Saque", logo: "https://placehold.co/160x80/e2e8f0/1e293b?text=Logo+Banco" },
+  { id: 1, name: "Facta Financeira", logo: "/images/partners/facta-financeira.png" },
+  { id: 2, name: "C6 Bank", logo: "/images/partners/c6-bank.png" },
+  { id: 3, name: "Banco Pan", logo: "/images/partners/banco-pan.png" },
+  { id: 4, name: "Novo Saque", logo: "/images/partners/novo-saque.png" },
 ]
 
 export function PartnersSection() {

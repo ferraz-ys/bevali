@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Soluções financeiras personalizadas com as melhores taxas do mercado. Crédito consignado, antecipação de FGTS e muito mais.",
   icons: {
-    icon: "/images/logo.png",
+    icon: "/favicon.ico",
   },
     generator: 'v0.dev'
 }
